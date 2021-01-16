@@ -1,9 +1,3 @@
-<!-- <div class="columns" *ngIf="users.length > 0; else noUsers">
-    <div class="column" *ngFor="let x of users; index as i">
-        <ngr-users-cards [user]="x" [userIndex]="i" (userDeleted)="onUserDeleted($event)"></ngr-users-cards>
-    </div>
-</div> -->
-
 <div class="panel-block" *ngIf="users.length > 0; else noUsers">
     <table class="table is-fullwidth">
         <thead>

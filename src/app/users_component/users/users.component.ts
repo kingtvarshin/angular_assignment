@@ -6,6 +6,7 @@ import { User } from '../models/user.interface';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
+  
 export class UsersComponent implements OnInit {
   users : User[]= [
     {
@@ -29,20 +30,14 @@ export class UsersComponent implements OnInit {
       email: 'aditi@gmail.com'
     }
   ]
+  
   constructor() { }
 
-//   onUserViewed(user: User) {
-//     console.log(this.users.indexOf(user));
-// }
-
-//   onUserDeleted(userIndex: number) {
-//   this.users.splice(userIndex,1)
-//   console.log(this.users);
-// }
-deleteclick(userIndex: number) {
+  deleteclick(userIndex: number) {
   this.users.splice(userIndex,1)
   console.log(userIndex);
-}
+  }
+  
   ngOnInit(): void {
   }
 
