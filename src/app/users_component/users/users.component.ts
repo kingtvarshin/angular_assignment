@@ -8,7 +8,7 @@ import { User } from '../models/user.interface';
 })
   
 export class UsersComponent implements OnInit {
-  users : User[]= [
+  users: User[] = [
     {
       name: 'vikrant',
       username: 'kingtvarshin',
@@ -29,9 +29,21 @@ export class UsersComponent implements OnInit {
       username: 'aditi',
       email: 'aditi@gmail.com'
     }
-  ]
+  ];
   
+  tableproperties = {
+    shouldenablehover: true
+}
+
   constructor() { }
+
+  get tableClasses() {
+    return { 'is-hoverable': this.tableproperties.shouldenablehover }
+  }
+
+  emailStyle(user: User) {
+    
+  }
 
   deleteclick(userIndex: number) {
   this.users.splice(userIndex,1)
